@@ -3,6 +3,7 @@
 // This file is the register file module. It is responsible for storing the data in the registers and reading the data from the registers.
 
 module register_file (
+  input logic clk,
   input logic [4:0] raddr1,
   input logic [4:0] raddr2,
   input logic [4:0] waddr,
