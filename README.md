@@ -8,4 +8,4 @@
 
     First let's implement the basic components of the RISC-V architecture. The basic components are:
     1. ALU
-    
+    2. Register File
