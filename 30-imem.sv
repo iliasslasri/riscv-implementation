@@ -6,7 +6,8 @@ module imem #(parameter N = 5) (
     input wire [31:0] data_in,
     output wire [31:0] data_out
 );
-    reg [2**N-1:0] mem [0:31];
+    // 2**N is the number of words in the memory
+    reg [31:0] mem [0:2**N-1];
 
     always @(posedge clk) begin
         if (we) begin
