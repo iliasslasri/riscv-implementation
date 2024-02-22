@@ -1,5 +1,5 @@
 /** instruction memory ***/
-module imem parameter N = 5; (
+module imem #(parameter N = 5) (
     input wire clk,
     input wire we,
     input wire [N-1:0] addr,
