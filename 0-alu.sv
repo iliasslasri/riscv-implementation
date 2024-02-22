@@ -6,6 +6,7 @@ module ALU(
     input [31:0] SrcB,
     input [2:0] ALUControl, // ALUControl will come from the ALU Decoder file 00-aludec.sv
     output reg [31:0] ALUResult,
+    output reg Zero
 );
 
 always_comb
@@ -17,4 +18,6 @@ always_comb
         3'b101: ALUResult = (SrcA < SrcB) ? 32'b1 : 32'b0; // set less then
         default: ALUResult = '0; // ????
     endcase
+
+assign Zero = (ALUResult == 0) ? 1 : 0;
 endmodule
