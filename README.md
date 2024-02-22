@@ -18,3 +18,5 @@ First let's implement the basic components of the RISC-V architecture. The basic
 6. Program Counter (PC)
 
     Note that the choise of the PC (PC+4 or PC+ImmExt) will be done by the control unit, where a module will take the control signals and the current PC and will output the next PC.
+
+7. Sign Extender : This module is responsible for selecting the immidiate from the instruction word and extending the immediate value of the instruction to 32 bits.
